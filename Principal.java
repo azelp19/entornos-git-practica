@@ -1,1 +1,16 @@
-public class Principal { public static void main(String[] args) { System.out.println("Hola mundo"); } }
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class Principal {
+    public static void main(String[] args) {
+        System.out.println("Hola mundo");
+        mostrarFechaHora();
+    }
+
+    public static void mostrarFechaHora() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now();  
+        System.out.println(dtf.format(now));  
+    }
+}
+
